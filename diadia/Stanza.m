@@ -121,6 +121,7 @@ const int NUMERO_MASSIMO_ATTREZZI = 10;
         [s appendString:[self.attrezzi[i] description]];
         [s appendString:@" "];
     }
+    [s appendString:@"\n"];
     return s;
 }
 

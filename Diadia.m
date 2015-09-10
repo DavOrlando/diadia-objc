@@ -13,7 +13,9 @@
 
 const NSString* MESSAGGIO_BENVENUTO= @"Ti trovi nell'Universita', ma oggi e' diversa dal solito...\nMeglio andare al piu' presto in biblioteca a studiare. Ma dov'e'?\nI locali sono popolati da strani personaggi, alcuni amici, altri... chissa!\nCi sono attrezzi che potrebbero servirti nell'impresa:\npuoi raccoglierli, usarli, posarli quando ti sembrano inutili\no regalarli se pensi che possano ingraziarti qualcuno.\n\nPer conoscere le istruzioni usa il comando 'aiuto'.";
 
-NSString *elencoComandi[3] = {@"fine",@"aiuto",@"vai"};
+const NSString* MESSAGGIO_COMANDO_SCONOSCIUTO=@"Comando sconosciuto!";
+
+NSString *elencoComandi[3] = {@"fine",@"aiuto",@"vai",@"prendi",@"posa"};
 
 -(void) initWithPartitaSemplice{
     Partita *partita = [[Partita alloc] initWithCfuIniziali];
@@ -27,9 +29,9 @@ NSString *elencoComandi[3] = {@"fine",@"aiuto",@"vai"};
     printf("%s \n%s",[MESSAGGIO_BENVENUTO UTF8String],[[[[self partita] stanzaCorrente] description] UTF8String]);
     do{
         fgets(inputUtente, 50, stdin);
-        int numberChar = strlen(inputUtente);
-        NSString *stringaLeggere = [[NSString alloc]initWithBytes:inputUtente length:numberChar encoding:NSUTF8StringEncoding];
-        istruzione = [stringaLeggere substringToIndex:numberChar-1];
+        int numberChar = (int)strlen(inputUtente);
+        NSString *stringaInput = [[NSString alloc]initWithBytes:inputUtente length:numberChar encoding:NSUTF8StringEncoding];
+        istruzione = [stringaInput substringToIndex:numberChar-1];
     }
     while(![self processaIstruzione:istruzione]);
     
@@ -55,9 +57,9 @@ NSString *elencoComandi[3] = {@"fine",@"aiuto",@"vai"};
     else if([[comandoDaEseguire nome]isEqualToString:@"posa"]){
         [self posa:[comandoDaEseguire parametro]];
     }
-    else NSLog(@"Comando sconosciuto!");
+    else printf("%s \n", [MESSAGGIO_COMANDO_SCONOSCIUTO UTF8String]);
     if ([[self partita] vinta]) {
-        NSLog(@"Hai vinto!");
+        printf("Hai vinto!");
         return true;
     }
     else return false;
@@ -66,31 +68,30 @@ NSString *elencoComandi[3] = {@"fine",@"aiuto",@"vai"};
 -(void) prendi:(NSString *) nomeAttrezzo{
     Attrezzo *a = [[[self partita] stanzaCorrente]getAttrezzo:nomeAttrezzo];
     if (a==NULL) {
-        NSLog(@"Attrezzo non presente.Cosa vuoi prendere dalla stanza?");
+        printf("Attrezzo non presente.Cosa vuoi prendere dalla stanza?\n");
         return;
     }
     [[[self partita] stanzaCorrente]removeAttrezzo:a];
     [[[[self partita] giocatore] borsa]addAttrezzo:a];
-    NSLog([[[[self partita]giocatore]borsa]description]);
+    printf("%s\n", [[[[[self partita]giocatore]borsa]description] UTF8String]);
 }
 
 -(void) vai:(NSString *) direzione{
     if (direzione==NULL) {
-        NSLog(@"Dove vuoi andare?");
+        printf("Dove vuoi andare?\n");
     }
     else{
         Stanza *prossimaStanza = [[Stanza alloc]init];
         prossimaStanza = [[[self partita] stanzaCorrente] getStanzaAdiacente:direzione];
         if (prossimaStanza==NULL) {
-            NSLog(@"Direzione inesistente!");
+            printf("Direzione inesistente!\n");
         }
         else{
             [[self partita] setStanzaCorrente:prossimaStanza];
-            int cfu = [[self partita] cfu] -1;
-            [[self partita] setCfu:cfu];
+            [[self partita] setCfu:[[self partita] cfu] -1];
         }
     }
-    NSLog([[[self partita] stanzaCorrente] description]);
+    printf("%s\n",[[[[self partita] stanzaCorrente] description] UTF8String]);
     
 }
 
@@ -99,20 +100,22 @@ NSString *elencoComandi[3] = {@"fine",@"aiuto",@"vai"};
     if(a!= NULL){
         [[[self partita]stanzaCorrente]addAttrezzo:a];
         [[[[self partita]giocatore]borsa]removeAttrezzo:nomeAttrezzo];
-        NSLog([[[self partita]stanzaCorrente]description]);
+        printf("%s\n",[[[[self partita]stanzaCorrente]description] UTF8String]);
     }
-    else NSLog(@"Oggetto non presente nella borsa");
+    else printf("Oggetto non presente nella borsa");
 }
 
 
 -(void) fine{
-    NSLog(@"Grazie di aver giocato!");
+    printf("Grazie di aver giocato!");
 }
 
 
 -(void)aiuto{
+    printf("Elenco comandi: ");
     for(int i =0;i<3;i++)
-        NSLog(@"%@",elencoComandi[i]);
+        printf("%s ",[elencoComandi[i] UTF8String]);
+    printf("\n");
 }
 
 
