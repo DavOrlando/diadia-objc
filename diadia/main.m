@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Diadia.h"
+
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        Diadia *gioco = [[Diadia alloc]init];
+        [gioco gioca];
     }
+    
     return 0;
 }

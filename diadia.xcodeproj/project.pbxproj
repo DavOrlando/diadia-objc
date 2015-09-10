@@ -7,7 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3ED2B2171AF7A9F00077D76C /* Giocatore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2B2161AF7A9F00077D76C /* Giocatore.m */; };
+		3ED2B21A1AF7AA120077D76C /* Borsa.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2B2191AF7AA120077D76C /* Borsa.m */; };
+		3ED2B21D1AF7AA5A0077D76C /* Labirinto.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED2B21C1AF7AA5A0077D76C /* Labirinto.m */; };
 		3EE1445B1AF50FA8007DA4A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1445A1AF50FA8007DA4A1 /* main.m */; };
+		3EE144661AF51054007DA4A1 /* Attrezzo.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE144651AF51054007DA4A1 /* Attrezzo.m */; };
+		3EE144691AF51066007DA4A1 /* Partita.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE144681AF51066007DA4A1 /* Partita.m */; };
+		3EE1446C1AF51072007DA4A1 /* Comando.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EE1446B1AF51072007DA4A1 /* Comando.m */; };
+		3EEA083E1AF6012500AFB493 /* Stanza.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA083D1AF6012500AFB493 /* Stanza.m */; };
+		3EEA08411AF6264C00AFB493 /* Diadia.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EEA08401AF6264C00AFB493 /* Diadia.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +31,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3ED2B2151AF7A9F00077D76C /* Giocatore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Giocatore.h; sourceTree = "<group>"; };
+		3ED2B2161AF7A9F00077D76C /* Giocatore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Giocatore.m; sourceTree = "<group>"; };
+		3ED2B2181AF7AA120077D76C /* Borsa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Borsa.h; sourceTree = "<group>"; };
+		3ED2B2191AF7AA120077D76C /* Borsa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Borsa.m; sourceTree = "<group>"; };
+		3ED2B21B1AF7AA5A0077D76C /* Labirinto.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Labirinto.h; sourceTree = "<group>"; };
+		3ED2B21C1AF7AA5A0077D76C /* Labirinto.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Labirinto.m; sourceTree = "<group>"; };
 		3EE144571AF50FA8007DA4A1 /* diadia */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = diadia; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EE1445A1AF50FA8007DA4A1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3EE144641AF51054007DA4A1 /* Attrezzo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attrezzo.h; sourceTree = "<group>"; };
+		3EE144651AF51054007DA4A1 /* Attrezzo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Attrezzo.m; sourceTree = "<group>"; };
+		3EE144671AF51066007DA4A1 /* Partita.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Partita.h; sourceTree = "<group>"; };
+		3EE144681AF51066007DA4A1 /* Partita.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Partita.m; sourceTree = "<group>"; };
+		3EE1446A1AF51072007DA4A1 /* Comando.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Comando.h; sourceTree = "<group>"; };
+		3EE1446B1AF51072007DA4A1 /* Comando.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Comando.m; sourceTree = "<group>"; };
+		3EEA083C1AF6012500AFB493 /* Stanza.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Stanza.h; sourceTree = "<group>"; };
+		3EEA083D1AF6012500AFB493 /* Stanza.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Stanza.m; sourceTree = "<group>"; };
+		3EEA083F1AF6264C00AFB493 /* Diadia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Diadia.h; sourceTree = SOURCE_ROOT; };
+		3EEA08401AF6264C00AFB493 /* Diadia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Diadia.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +62,53 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3E05E5C11B0B008B00A7F20A /* DiadiaTest */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = DiadiaTest;
+			sourceTree = "<group>";
+		};
+		3ED2B21E1AF7E8030077D76C /* attrezzi */ = {
+			isa = PBXGroup;
+			children = (
+				3EE144641AF51054007DA4A1 /* Attrezzo.h */,
+				3EE144651AF51054007DA4A1 /* Attrezzo.m */,
+			);
+			name = attrezzi;
+			sourceTree = "<group>";
+		};
+		3ED2B21F1AF7E8140077D76C /* ambienti */ = {
+			isa = PBXGroup;
+			children = (
+				3ED2B21B1AF7AA5A0077D76C /* Labirinto.h */,
+				3ED2B21C1AF7AA5A0077D76C /* Labirinto.m */,
+				3EEA083C1AF6012500AFB493 /* Stanza.h */,
+				3EEA083D1AF6012500AFB493 /* Stanza.m */,
+			);
+			name = ambienti;
+			sourceTree = "<group>";
+		};
+		3ED2B2201AF7E8200077D76C /* giocatore */ = {
+			isa = PBXGroup;
+			children = (
+				3ED2B2151AF7A9F00077D76C /* Giocatore.h */,
+				3ED2B2161AF7A9F00077D76C /* Giocatore.m */,
+				3ED2B2181AF7AA120077D76C /* Borsa.h */,
+				3ED2B2191AF7AA120077D76C /* Borsa.m */,
+			);
+			name = giocatore;
+			sourceTree = "<group>";
+		};
+		3ED2B2211AF7E85A0077D76C /* comandi */ = {
+			isa = PBXGroup;
+			children = (
+				3EE1446A1AF51072007DA4A1 /* Comando.h */,
+				3EE1446B1AF51072007DA4A1 /* Comando.m */,
+			);
+			name = comandi;
+			sourceTree = "<group>";
+		};
 		3EE1444E1AF50FA7007DA4A1 = {
 			isa = PBXGroup;
 			children = (
@@ -57,7 +128,16 @@
 		3EE144591AF50FA8007DA4A1 /* diadia */ = {
 			isa = PBXGroup;
 			children = (
+				3E05E5C11B0B008B00A7F20A /* DiadiaTest */,
+				3ED2B2211AF7E85A0077D76C /* comandi */,
+				3ED2B2201AF7E8200077D76C /* giocatore */,
+				3ED2B21F1AF7E8140077D76C /* ambienti */,
+				3ED2B21E1AF7E8030077D76C /* attrezzi */,
 				3EE1445A1AF50FA8007DA4A1 /* main.m */,
+				3EE144671AF51066007DA4A1 /* Partita.h */,
+				3EE144681AF51066007DA4A1 /* Partita.m */,
+				3EEA083F1AF6264C00AFB493 /* Diadia.h */,
+				3EEA08401AF6264C00AFB493 /* Diadia.m */,
 			);
 			path = diadia;
 			sourceTree = "<group>";
@@ -118,7 +198,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED2B2171AF7A9F00077D76C /* Giocatore.m in Sources */,
+				3ED2B21A1AF7AA120077D76C /* Borsa.m in Sources */,
+				3EE1446C1AF51072007DA4A1 /* Comando.m in Sources */,
+				3EEA08411AF6264C00AFB493 /* Diadia.m in Sources */,
+				3EE144691AF51066007DA4A1 /* Partita.m in Sources */,
+				3ED2B21D1AF7AA5A0077D76C /* Labirinto.m in Sources */,
 				3EE1445B1AF50FA8007DA4A1 /* main.m in Sources */,
+				3EE144661AF51054007DA4A1 /* Attrezzo.m in Sources */,
+				3EEA083E1AF6012500AFB493 /* Stanza.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +323,7 @@
 				3EE144601AF50FA8007DA4A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
